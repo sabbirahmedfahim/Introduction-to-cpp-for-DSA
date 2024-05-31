@@ -10,7 +10,7 @@ class Student
     Student(char n[], int i, float g)
     {
         //how to declare a string?e
-        name = n; 
+        name = n;  
         id = i;
         gpa = g;
     }
