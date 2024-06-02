@@ -1,17 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     int n;
-    cin>>n;
-    char arr[n];
-    cin>>arr;
-    // sort(arr, arr+n);
-    
-    for (int i = 0; i < n; i++)
+    cin >> n;
+    char ch;
+    int count[26] = {0};
+    while (cin >> ch)
     {
-        cout<<arr[i];
+        count[ch - 97]++;
+    }
+    for (int i = 0; i < 26; i++)
+    {
+        for (int j = 0; j < count[i]; j++)
+        {
+            cout << (char)(i + 97);
+        }
     }
     return 0;
 }
