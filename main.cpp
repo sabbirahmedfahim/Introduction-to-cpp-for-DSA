@@ -1,37 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Student
-{
-public:
-    string name;
-    int roll;
-    int marks;
-};
-bool compare_objects(Student a, Student b)
-{
-    if (a.marks == b.marks)
-    {
-        return a.roll < b.roll;
-    }
-    else
-    {
-        return a.marks > b.marks;
-    }
 
+void nth_element(int a, int d, int n)
+{
+    int ans = a + (n - 1) * d;
+    cout<<ans<<endl;
 }
+void sum_of_N(int a, int d, int n)
+{
+    float ans = (float) n/2 * (2*a + (n-1) * d);
+    cout<<ans<<endl;
+}
+
 int main()
 {
-    int n;
-    cin >> n;
-    Student a[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i].name >> a[i].roll >> a[i].marks;
-    }
-    sort(a, a + n, compare_objects);
-    for (int i = 0; i < n; i++)
-    {
-        cout << a[i].name << " " << a[i].roll << " " << a[i].marks << endl;
-    }
+    sum_of_N(34, -2, 13);  
+
     return 0;
 }
